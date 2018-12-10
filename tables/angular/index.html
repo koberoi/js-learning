@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='AngularTable'>
+<head>
+	<title>Angular Table</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="env.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller='Main'>
+    <h1>Angular Realtime</h1>
+
+    <table>
+        <col width="100">
+        <col width="100">
+        <col width="250">
+        <tr>
+            <th>ID</th>
+            <th>Value</th>
+            <th>Name</th>
+        </tr>
+        
+        <tr ng-repeat="row in rows">
+            <td>{{::row.id}}</td>
+            <td>{{::row.value}}</td>
+            <td>{{::row.name}}</td>
+        </tr>
+    </table>
+</body>
+</html>
